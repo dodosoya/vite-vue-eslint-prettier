@@ -5,3 +5,98 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 ## Recommended IDE Setup
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
+## Configuration with ESLint and Prettier
+
+1. Create Vue3 project using Vite
+
+   ```
+   npm create vite@latest
+   ```
+
+2. Install Prettier
+
+   ```
+   npm install --save-dev --save-exact prettier
+   ```
+
+   And create a config file for prettier:
+
+   ```
+   echo {}> .prettierrc.json
+   ```
+
+3. Install ESLint
+
+   ```
+   npm install --save-dev eslint eslint-plugin-vue
+   ```
+
+   And configure ESLint by creating a .eslintrc.js file:
+
+   ```
+   module.exports = {
+     env: {
+       node: true,
+     },
+     extends: [
+       'eslint:recommended',
+       'plugin:vue/vue3-recommended',
+     ],
+     rules: {
+       // override/add rules settings here, such as:
+       // 'vue/no-unused-vars': 'error'
+     }
+   }
+   ```
+
+4. Turn off ESLint's formatting rules that would conflict with Prettier
+
+   ```
+   npm install --save-dev eslint-config-prettier
+   ```
+
+   And register the config in .eslintrc.js file under extends:
+
+   ```
+   extends: [
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'prettier',
+   ],
+   ```
+
+5. Add commands to scripts in package.json
+
+   ```
+   "scripts":{
+     //...
+     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
+     "format": "prettier .  --write"
+   }
+   ```
+
+6. Set up ESLint and Prettier with VS Code
+
+   .vscode/settings.json
+
+   ```
+   {
+     "editor.defaultFormatter": "esbenp.prettier-vscode",
+     "editor.formatOnSave": true
+   }
+   ```
+
+7. Update Prettier config
+
+   .prettierrc.json
+
+   ```
+   {
+     "singleQuote": true,
+     "trailingComma": "es5",
+     "tabWidth": 2,
+     "semi": false,
+     "arrowParens": "avoid"
+   }
+   ```

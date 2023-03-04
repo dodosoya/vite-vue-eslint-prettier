@@ -100,3 +100,10 @@ This template should help get you started developing with Vue 3 in Vite. The tem
      "arrowParens": "avoid"
    }
    ```
+
+Reference:
+
+- [Vite](https://vitejs.dev/)
+- [Prettier](https://prettier.io/)
+- [ESLint](https://eslint.org/)
+- [ESLint and Prettier with Vite and Vue.js 3](https://vueschool.io/articles/vuejs-tutorials/eslint-and-prettier-with-vite-and-vue-js-3/)

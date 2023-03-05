@@ -133,3 +133,13 @@ jsconfig.json
   }
 }
 ```
+
+## Install Tailwind CSS
+
+Follow the steps here: [Install Tailwind CSS with Vite](https://tailwindcss.com/docs/guides/vite#vue).
+
+(Optional) Install Prettier plugin for Tailwind CSS that automatically sorts classes.
+
+```
+npm install -D prettier-plugin-tailwindcss
+```
